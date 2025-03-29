@@ -12,8 +12,8 @@ config_version=5
 
 config/name="Horizons"
 config/description="Basic top-down sandbox survival game"
-run/main_scene="res://Scenes/main.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="res://Scenes/Main.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
