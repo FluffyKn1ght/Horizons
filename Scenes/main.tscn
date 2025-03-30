@@ -182,9 +182,9 @@ texture = ExtResource("2_kln2b")
 texture = ExtResource("3_kln2b")
 0:0/animation_columns = 3
 0:0/animation_mode = 1
-0:0/animation_frame_0/duration = 0.5
-0:0/animation_frame_1/duration = 0.5
-0:0/animation_frame_2/duration = 0.5
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
