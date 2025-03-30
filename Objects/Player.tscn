@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bg26glx2cenhb"]
+[gd_scene load_steps=25 format=3 uid="uid://bg26glx2cenhb"]
 
 [ext_resource type="Script" uid="uid://cua4r6s2qkasv" path="res://Scripts/Player.gd" id="1_6ggkh"]
 [ext_resource type="Texture2D" uid="uid://d60nny7goke0" path="res://Assets/Sprites/Player.png" id="2_swjan"]
@@ -196,6 +196,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yk4ok"]
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
 collision_mask = 14
@@ -220,3 +222,11 @@ metadata/_custom_type_script = "uid://dewf8bbu0r1y4"
 [node name="Hand" type="Sprite2D" parent="."]
 position = Vector2(-32, 16)
 scale = Vector2(2, 2)
+
+[node name="Area" type="Area2D" parent="."]
+scale = Vector2(6, 6)
+collision_layer = 128
+collision_mask = 64
+
+[node name="Shape" type="CollisionShape2D" parent="Area"]
+shape = SubResource("RectangleShape2D_yk4ok")

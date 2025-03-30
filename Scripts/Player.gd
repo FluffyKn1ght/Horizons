@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 # Player Script
+class_name Player
 
 const MAX_SPEED : float = 400.0 # The max value of velocity.x and velocity.y
 const ACCEL_MULTI : float = 50.0 # How fast the player accelerates (0.0-whatever)
