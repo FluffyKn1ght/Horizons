@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BlockItemData" load_steps=4 format=3 uid="uid://bwg71rh6l0ob3"]
+
+[ext_resource type="Script" uid="uid://bla5phv3wm76l" path="res://Scripts/BlockItemData.gd" id="1_e21rm"]
+[ext_resource type="Texture2D" uid="uid://dg5rcrnr6cikf" path="res://Assets/Tilesets/blocks.png" id="2_3ju5t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b6k7"]
+atlas = ExtResource("2_3ju5t")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_e21rm")
+blockType = "Wood"
+texture = SubResource("AtlasTexture_5b6k7")
+name = "Wood"
+metadata/_custom_type_script = "uid://bla5phv3wm76l"

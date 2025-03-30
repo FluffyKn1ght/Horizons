@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+# Player Script
+
 const MAX_SPEED : float = 400.0 # The max value of velocity.x and velocity.y
 const ACCEL_MULTI : float = 50.0 # How fast the player accelerates (0.0-whatever)
 const DECEL_MULTI : float = 0.75 # How fast the player decelarates (0.0-0.9999)
@@ -12,12 +14,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	# === Handle input
-	# --- Set axis variables
+	# TODO: HP handling
+	
+	# Set axis variables
 	var joystickx = Input.get_axis("Left", "Right")
 	var joysticky = Input.get_axis("Up", "Down")
 	
-	# --- Do movement
+	# Do movement
 	# Accellerate if player is holding down button
 	if joystickx != 0 or joysticky != 0:
 		velocity += Vector2(ACCEL_MULTI * joystickx, ACCEL_MULTI * joysticky)
@@ -26,7 +29,6 @@ func _process(_delta: float) -> void:
 		velocity *= Vector2(DECEL_MULTI, DECEL_MULTI)
 	velocity = velocity.limit_length(MAX_SPEED) # Cap the speed
 	
-	# --- Animation and flipping
 	# Detect which direction to face in
 	# Run this only when we're moving
 	if joystickx != 0 or joysticky != 0:
@@ -43,4 +45,13 @@ func _process(_delta: float) -> void:
 		if joystickx < 0: $Sprite.flip_h = true
 		else: $Sprite.flip_h = false
 
-	move_and_slide()
+	move_and_slide() # Run the movement/collision engine
+	
+	# Rotate, position and layer hand sprite according to mouse position
+	# TODO: make sure that this is gamepad compatable
+	if get_global_mouse_position().x < global_position.x:
+		$Hand.position = Vector2(-32.0, 16.0)
+	else: $Hand.position = Vector2(32.0, 16.0)
+	$Hand.look_at(get_global_mouse_position())
+	if direction == "Up": $Hand.z_index = 0
+	else: $Hand.z_index = 2
