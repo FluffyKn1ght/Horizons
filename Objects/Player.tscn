@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cua4r6s2qkasv" path="res://Scripts/Player.gd" id="1_6ggkh"]
 [ext_resource type="Texture2D" uid="uid://d60nny7goke0" path="res://Assets/Sprites/Player.png" id="2_swjan"]
-[ext_resource type="Script" uid="uid://dewf8bbu0r1y4" path="res://Scripts/HealthComponent.gd" id="3_yk4ok"]
+[ext_resource type="PackedScene" uid="uid://o10om0ctlnvk" path="res://Scenes/HealthComponent.tscn" id="3_yk4ok"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cbk5r"]
 size = Vector2(80, 59)
@@ -212,10 +212,7 @@ scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_51rrn")
 animation = &"Walk Side"
 
-[node name="HealthComponent" type="Node" parent="."]
-script = ExtResource("3_yk4ok")
-health = 5
-metadata/_custom_type_script = "uid://dewf8bbu0r1y4"
+[node name="HealthComponent" parent="." instance=ExtResource("3_yk4ok")]
 
 [node name="Hand" type="Sprite2D" parent="."]
 position = Vector2(-32, 16)
