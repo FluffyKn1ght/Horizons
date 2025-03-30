@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DictionaryAsAResource" load_steps=2 format=3 uid="uid://yep0dfiggdck"]
+
+[ext_resource type="Script" uid="uid://nu0vwjt270vl" path="res://Scripts/Dictionary.gd" id="1_d75as"]
+
+[resource]
+script = ExtResource("1_d75as")
+dictionary = {
+"Wood": Vector2i(0, 0)
+}
+metadata/_custom_type_script = "uid://nu0vwjt270vl"

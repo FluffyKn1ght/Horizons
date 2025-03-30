@@ -7,6 +7,7 @@ var player : Player # The player node of the crosshair
 var area : Area2D # The collision detection area
 
 var snapToTiles : bool = true # Whether the cursor snaps to the tile grid
+@export_enum("Block", "Weapon") var cursorMode : String = "Block"
 
 func _ready() -> void:
 	# Initialize crosshair

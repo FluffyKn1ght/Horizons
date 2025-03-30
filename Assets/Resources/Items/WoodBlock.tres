@@ -13,4 +13,7 @@ blockType = "Wood"
 texture = SubResource("AtlasTexture_5b6k7")
 name = "Wood"
 tooltip = "This is a test tooltip"
+maxStack = 0
+durability = 0
+durabilityMax = 0
 metadata/_custom_type_script = "uid://bla5phv3wm76l"

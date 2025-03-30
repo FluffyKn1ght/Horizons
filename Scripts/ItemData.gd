@@ -7,5 +7,3 @@ class_name ItemData
 @export var name : String = "New Item"
 @export var tooltip : String = "This is a test tooltip"
 @export var maxStack : int
-@export var durability : int
-@export var durabilityMax : int

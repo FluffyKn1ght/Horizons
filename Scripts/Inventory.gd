@@ -42,4 +42,14 @@ func _process(delta: float) -> void:
 
 # Returns the InventoryItem in the current slot
 func get_active_item() -> InventoryItem:
-	return slots[currentSlot].item
+	if slots[currentSlot]: return slots[currentSlot].item
+	else: return null
+	
+func remove_item(slot: int) -> void:
+	slots[slot].item = null
+	
+func set_item(item: ItemData, slot: int) -> void:
+	var newItem = InventoryItem.new()
+	newItem.data = item
+	newItem.amount = 1
+	slots[slot].item = newItem
