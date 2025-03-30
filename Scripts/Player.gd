@@ -15,7 +15,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	# TODO: HP handling
-	
+	movePlayer()
+
+func movePlayer():
 	# Set axis variables
 	var joystickx = Input.get_axis("Left", "Right")
 	var joysticky = Input.get_axis("Up", "Down")
